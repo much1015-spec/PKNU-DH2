@@ -6,21 +6,9 @@
 
 `index.html`을 브라우저로 열거나, VS Code Live Server 같은 정적 서버로 실행하세요.
 
-## Firebase 점수판 연결
+## Firebase 사용
 
-1. [Firebase Console](https://console.firebase.google.com)에서 프로젝트와 **Cloud Firestore** 데이터베이스를 만듭니다.
-2. 웹 앱을 추가한 뒤 SDK 설정값을 복사합니다.
-3. `app.js`의 `firebaseConfig` 주석 부분에 설정값을 입력합니다.
-4. Firebase CLI에서 로그인 후 실행합니다.
-
-```bash
-npm install -g firebase-tools
-firebase login
-firebase use --add
-firebase deploy --only firestore:rules
-```
-
-Firebase 설정 전에도 게임은 동작하며, 예시 점수판을 표시합니다.
+Firebase를 사용하지 않는 정적 게임으로 구성했습니다. 따라서 Firebase 계정, API 키, 데이터베이스 설정 없이 GitHub와 Vercel만으로 배포할 수 있습니다. 점수판은 예시 점수를 표시합니다.
 
 ## GitHub → Vercel 배포
 
