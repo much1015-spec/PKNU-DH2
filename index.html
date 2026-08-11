@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff8caf" />
+    <title>냥냥! 간식 받기</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header>
+        <p class="eyebrow">CAT SNACK CATCHER</p>
+        <h1>냥냥! 간식 받기</h1>
+        <p class="subtitle">맛있는 음식만 받아먹어요. 장난감은 피하세요!</p>
+      </header>
+
+      <section class="hud" aria-label="게임 정보">
+        <div class="stat"><span>점수</span><strong id="score">0</strong></div>
+        <div class="stat"><span>생명</span><strong id="lives" aria-label="생명 3개">♥ ♥ ♥</strong></div>
+        <button id="soundButton" class="icon-button" type="button" aria-label="소리 켜기/끄기">♪</button>
+      </section>
+
+      <section id="game" class="game" aria-label="게임 영역" tabindex="0">
+        <div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+        <div id="cat" class="cat" aria-label="고양이">🐱</div>
+        <div id="message" class="message">
+          <span class="message-icon">🐟</span>
+          <h2>간식 시간!</h2>
+          <p>← → 키 또는 화면을 눌러 움직여요</p>
+          <button id="startButton" type="button">시작하기</button>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="터치 조작">
+        <button id="leftButton" type="button" aria-label="왼쪽으로 이동">←</button>
+        <p>음식 <b>+1점</b> · 장난감 <b class="danger">생명 -1</b></p>
+        <button id="rightButton" type="button" aria-label="오른쪽으로 이동">→</button>
+      </section>
+
+      <section class="ranking">
+        <div><p class="eyebrow">FIREBASE</p><h2>오늘의 최고 점수</h2></div>
+        <ol id="leaderboard"><li><span>로딩 중...</span><b>—</b></li></ol>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
